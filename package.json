@@ -1,6 +1,11 @@
 {
   "name": "wine_react_rails",
   "private": true,
+  "engines": {
+    "yarn": "1.x",
+    "npm": "6.x",
+    "node": "12.x"
+  },
   "dependencies": {
     "@babel/preset-react": "^7.10.4",
     "@rails/actioncable": "^6.0.0",
@@ -19,5 +24,27 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.11.0"
-  }
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "babel.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "yarn install && yarn build",
+    "deploy": "cp -a build/. public/",
+    "heroku-postbuild": "yarn build && yarn deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickstern2/wine_react_rails.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickstern2/wine_react_rails/issues"
+  },
+  "homepage": "https://github.com/nickstern2/wine_react_rails#readme"
 }
